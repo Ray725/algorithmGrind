@@ -28,7 +28,7 @@ public class ProblemOne {
 			if(!stack.isEmpty()) {
 				System.out.println(stack.pop());
 			} else {
-				break;
+				
 			}
 		}
 	}

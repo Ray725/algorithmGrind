@@ -6,10 +6,8 @@ import java.util.Stack;
 public class ProblemOne {
 	
 	static void reverse(String fileName) {
-		Stack<String> stack = new Stack<String>();
+		Stack stack = new Stack();
 		String line = null;
-		
-		// populate the stack
 		try {
 			File file = new File(fileName);
 			BufferedReader br = new BufferedReader(new FileReader(file));
@@ -21,15 +19,6 @@ public class ProblemOne {
 			System.out.println("Unable to open file: " + fileName);
 		} catch (IOException ex) {
 			System.out.println("Error reading file: " + fileName);
-		}
-		
-		// pop the stack
-		while(true) {
-			if(!stack.isEmpty()) {
-				System.out.println(stack.pop());
-			} else {
-				break;
-			}
 		}
 	}
 	
