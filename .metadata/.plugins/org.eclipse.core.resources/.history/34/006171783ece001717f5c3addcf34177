@@ -23,19 +23,24 @@ public class ProblemOne {
 		try {
 			File file = new File(fileName);
 			BufferedReader br = new BufferedReader(new FileReader(file));
-			while((line = br.readLine()) != null) {
-				if(stack.size() < 50) {
-					stack.push(line);
-				} else {
-					popStack(stack);
-					stack.push(line);
-				}
+			while((line = br.readLine()) != null && stack.size() < 50) {
+				stack.push(line);
 			}
+			
 			br.close();
 		} catch (FileNotFoundException ex) {
 			System.out.println("Unable to open file: " + fileName);
 		} catch (IOException ex) {
 			System.out.println("Error reading file: " + fileName);
+		}
+		
+		// pop the stack
+		while(true) {
+			if(!stack.isEmpty()) {
+				System.out.println(stack.pop());
+			} else {
+				break;
+			}
 		}
 	}
 	

@@ -28,7 +28,6 @@ public class ProblemOne {
 					stack.push(line);
 				} else {
 					popStack(stack);
-					stack.push(line);
 				}
 			}
 			br.close();

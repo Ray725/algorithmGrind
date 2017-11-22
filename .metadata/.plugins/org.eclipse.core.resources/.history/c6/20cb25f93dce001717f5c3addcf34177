@@ -14,7 +14,7 @@ public class ProblemOne {
 			}
 		}
 	}
-
+	/* first make popping the stack separate
 	static void reverseByFifty(String fileName) {
 		Stack<String> stack = new Stack<String>();
 		String line = null;
@@ -24,12 +24,7 @@ public class ProblemOne {
 			File file = new File(fileName);
 			BufferedReader br = new BufferedReader(new FileReader(file));
 			while((line = br.readLine()) != null) {
-				if(stack.size() < 50) {
-					stack.push(line);
-				} else {
-					popStack(stack);
-					stack.push(line);
-				}
+				stack.push(line);
 			}
 			br.close();
 		} catch (FileNotFoundException ex) {
@@ -37,7 +32,17 @@ public class ProblemOne {
 		} catch (IOException ex) {
 			System.out.println("Error reading file: " + fileName);
 		}
+		
+		// pop the stack
+		while(true) {
+			if(!stack.isEmpty()) {
+				System.out.println(stack.pop());
+			} else {
+				break;
+			}
+		}
 	}
+	*/
 	
 	static void reverse(String fileName) {
 		Stack<String> stack = new Stack<String>();
@@ -58,7 +63,13 @@ public class ProblemOne {
 		}
 		
 		// pop the stack
-		popStack(stack);
+		while(true) {
+			if(!stack.isEmpty()) {
+				System.out.println(stack.pop());
+			} else {
+				break;
+			}
+		}
 	}
 	
 	static void readFile(String fileName) {
