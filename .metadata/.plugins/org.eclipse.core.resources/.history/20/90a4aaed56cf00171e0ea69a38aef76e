@@ -15,10 +15,10 @@ public class ProblemOne {
 			BufferedReader br = new BufferedReader(new FileReader(file));
 			String line;
 			while((line = br.readLine()) != null) {
-				if(line.length() == 0) {
-					System.out.println(deque.getFirst());
+				if(line == "") {
+					System.out.println(deque.peekFirst());
 				} else {
-					if(deque.size() > 41) {
+					if(deque.size() > 42) {
 						deque.removeFirst();
 					}
 				}
@@ -30,6 +30,7 @@ public class ProblemOne {
 		} catch (IOException ex) {
 			System.out.println("Error reading file: " + fileName);
 		}
+		System.out.println(deque);
 	}
 	
 	static void popStack(Stack<String> stack) {

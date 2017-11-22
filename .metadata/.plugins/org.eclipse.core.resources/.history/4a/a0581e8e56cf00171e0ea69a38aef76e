@@ -8,19 +8,15 @@ import java.util.Stack;
 public class ProblemOne {
 	
 	static void lastFourtyTwo(String fileName) {
-		Deque<String> deque = new LinkedList<>();
+		Deque<Object> deque = new LinkedList<>();
 		// populate the deque
 		try {
 			File file = new File(fileName);
 			BufferedReader br = new BufferedReader(new FileReader(file));
 			String line;
 			while((line = br.readLine()) != null) {
-				if(line.length() == 0) {
-					System.out.println(deque.getFirst());
-				} else {
-					if(deque.size() > 41) {
-						deque.removeFirst();
-					}
+				if(deque.size() > 42) {
+					deque.removeFirst();
 				}
 				deque.addLast(line);
 			}
@@ -30,6 +26,7 @@ public class ProblemOne {
 		} catch (IOException ex) {
 			System.out.println("Error reading file: " + fileName);
 		}
+		System.out.println(deque);
 	}
 	
 	static void popStack(Stack<String> stack) {

@@ -16,7 +16,9 @@ public class ProblemOne {
 			String line;
 			while((line = br.readLine()) != null) {
 				if(line.length() == 0) {
-					System.out.println(deque.getFirst());
+					System.out.println(deque.iterator());
+					System.out.println(deque);
+					System.out.println(deque.size());
 				} else {
 					if(deque.size() > 41) {
 						deque.removeFirst();
