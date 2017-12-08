@@ -5,4 +5,4 @@ Source code can be found in data_structures/src/data_structures
 
 ## Finished Exercises
 ### Chapter 1
-* Exercise 1.1: 1, 2, 3, 4
+* Exercise 1.1: 1, 2, 3, 4, 5
