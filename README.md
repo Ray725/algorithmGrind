@@ -5,6 +5,6 @@ In anticipation of both coding interviews and my data structures class next seme
 
 Source code can be found in data_structures/src/data_structures
 
-Finished:
-Chapter 1
-Exercise 1.1: 1, 2, 3, 4
+## Finished Exercises
+### Chapter 1
+* Exercise 1.1: 1, 2, 3, 4
